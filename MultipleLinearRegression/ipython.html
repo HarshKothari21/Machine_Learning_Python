@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Consolas'; font-size:10pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">IPython 6.4.0 -- An enhanced Interactive Python.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br />Restarting kernel... </p>
+<hr />
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /> <br />Kernel died, restarting</p>
+<hr />
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">1</span><span style=" color:#000080;">]:</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">1</span><span style=" color:#000080;">]:</span> import numpy as np</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> import matplotlib.pyplot as plt</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> import pandas as pd</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">2</span><span style=" color:#000080;">]:</span> dataset = pd.read_csv('50_companies.csv')</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">3</span><span style=" color:#000080;">]:</span> dataset.shape</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">3</span><span style=" color:#8b0000;">]:</span> (50, 5)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">4</span><span style=" color:#000080;">]:</span> dataset.describe</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">4</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;bound method NDFrame.describe of     Major&amp;Minor Works  R&amp;D Spend    ...       Location     Profit</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0           185849.20  151897.80    ...      Bangalore  217261.83</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1           183097.70  166377.59    ...      Hyderabad  216792.06</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2           173941.51  116145.55    ...           Pune  216050.39</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3           164872.41  133671.85    ...      Bangalore  207901.99</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4           162607.34  106391.77    ...           Pune  191187.94</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5           152376.90  114814.71    ...      Bangalore  181991.12</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6           155115.46  162198.87    ...      Hyderabad  181122.51</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7           150798.13  160530.06    ...           Pune  180752.60</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8           141042.52  163718.95    ...      Bangalore  177211.77</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9           143834.88  123679.17    ...      Hyderabad  174759.96</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10          122413.08  125594.11    ...           Pune  171121.95</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11          121171.96  106790.61    ...      Hyderabad  169259.40</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12          114363.75  142320.38    ...           Pune  166585.52</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13          112492.39  150495.07    ...      Hyderabad  159307.35</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14          140443.24  171547.42    ...           Pune  157602.65</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15          135023.61  137616.84    ...      Bangalore  154917.04</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16           98513.11  136597.55    ...      Hyderabad  151992.93</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17          115157.16  160077.58    ...      Bangalore  150370.37</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18          112249.16  129175.79    ...           Pune  149266.90</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19          106919.70  168514.11    ...      Bangalore  147776.86</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20           96753.86  128867.30    ...      Hyderabad  143474.03</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21           98889.47  168773.43    ...      Bangalore  136313.02</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22           94494.56  137782.75    ...           Pune  135352.25</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23           88032.53  120751.03    ...           Pune  133733.99</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24           97544.01  114281.34    ...      Bangalore  133552.04</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25           85164.71  154553.16    ...      Hyderabad  132404.34</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26           95828.87  159135.98    ...           Pune  130733.54</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27           92607.60  142864.55    ...      Bangalore  130008.31</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28           86551.52  197645.56    ...           Pune  128282.38</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29           86105.48  168032.06    ...      Bangalore  126004.64</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">30           82494.48  130641.28    ...           Pune  124937.59</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">31           81636.38  167701.92    ...      Bangalore  122483.56</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">32           83908.86  144219.61    ...      Hyderabad  122427.84</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">33           75993.95  118057.49    ...           Pune  121778.92</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">34           66926.07  172693.92    ...      Hyderabad  121712.80</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">35           66514.02  100047.44    ...      Bangalore  121479.51</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">36           49163.76  142056.21    ...           Pune  115708.19</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">37           64569.95   66283.14    ...      Hyderabad  114949.14</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">38           40729.59   80947.93    ...      Bangalore  106229.06</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">39           59058.51   97982.09    ...      Hyderabad  106005.76</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">40           49254.33  133546.05    ...      Hyderabad  103239.91</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">41           48392.92   99710.77    ...           Pune  102798.83</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">42           44140.93  111189.63    ...      Hyderabad   96498.49</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">43           36005.73  142382.30    ...      Bangalore   94758.98</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">44           42677.74  169806.14    ...      Hyderabad   90200.33</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">45           21500.23  139153.04    ...      Bangalore   89926.08</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">46           21815.46  130816.21    ...           Pune   74490.75</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">47           20500.00  150426.92    ...      Hyderabad   67559.73</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">48           21042.05   66743.15    ...      Bangalore   60673.41</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">49           20500.00  131983.80    ...      Hyderabad   39681.40</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[50 rows x 5 columns]&gt;</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">5</span><span style=" color:#000080;">]:</span> dataset.isnull().any()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">5</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Major&amp;Minor Works    False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">R&amp;D Spend            False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Marketing Spend      False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Location             False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Profit               False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtype: bool</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">6</span><span style=" color:#000080;">]:</span> dataset.isnull()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">6</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Major&amp;Minor Works  R&amp;D Spend  Marketing Spend  Location  Profit</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9               False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">30              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">31              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">32              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">33              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">34              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">35              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">36              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">37              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">38              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">39              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">40              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">41              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">42              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">43              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">44              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">45              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">46              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">47              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">48              False      False            False     False   False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">49              False      False            False     False   False</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">7</span><span style=" color:#000080;">]:</span> X = dataset.iloc[:, :-1].values</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> Y = dataset.iloc[:, 4].values</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">8</span><span style=" color:#000080;">]:</span> from sklearn.preprocessing import LabelEncoder, OneHotEncoder</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> labelencoder = LabelEncoder()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> X[:, 3] = labelencoder.fit_transform(X[:, 3])</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> onehotencoder = OneHotEncoder(categorical_features = [3])</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> X = onehotencoder.fit_transform(X).toarray()</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">9</span><span style=" color:#000080;">]:</span> from sklearn.model_selection import train_test_split</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = 0.2, random_state=0)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">10</span><span style=" color:#000080;">]:</span> from sklearn.linear_model import LinearRegression</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> regressor = LinearRegression()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> regressor.fit(X_train, Y_train)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">10</span><span style=" color:#8b0000;">]:</span> LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">11</span><span style=" color:#000080;">]:</span> y_pred = regressor.predict(X_test)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">12</span><span style=" color:#000080;">]:</span> h = pd.DataFrame({'Acual': Y_test.flatten(), 'Prediction': y_pred.flatten()})</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">28</span><span style=" color:#000080;">]:</span> h.plot(kind='bar',figsize=(10,8))</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">    ...:</span> plt.show()</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAmwAAAHSCAYAAABRvZe9AAAACXBIWXMAAAsS
+AAALEgHS3X78AAAAOXpUWHRTb2Z0d2FyZQAACJnLTSwpyMkvyclMUihLLSrO
+zM9TMNIDQh2FjJKSAit9/Vy4Ar38onR9AKceEPLGlRjzAAAgAElEQVR4nO3d
+fVSU553/8c8oSYjGUDHVwI4GzUyDERQVEm1sQsMS1HbxGDXRJgWCW87R9rhr
+t914mjU7nJMmtN3dPGyNu7OxEXM22JO0kdYosjHO2a05SNXgxhgXkhULSDEa
+RI2PwP37w5+zoYAPw8h8Gd+vv/Ca++G6gNB377lnxuU4jiMAAACYNSjSEwAA
+AMClEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGxUR6AuF22223KSkpqd/Od/TUUY0YMqLfztffonl90bw2
+ifUNdKxv4IrmtUmsL9zq6+t15MiRy2/oRJmpU6f26/n+ftvf9+v5+ls0ry+a
+1+Y4rG+gY30DVzSvzXFYX7hdabfwlCgAAIBxBBsAAIBxBBsAAIBxUfeiAwAA
+0Dfnz59XY2Ojzpw50+2xnLgcffTRRxGYVf+4VuuLjY2V2+3WDTfcENL+BBsA
+AOiisbFRw4YNU1JSklwuV5fHDp04pMRhiRGa2bV3LdbnOI6OHj2qxsZGjR07
+NqRj8JQoAADo4syZMxoxYkS3WENoXC6XRowY0eMVyytFsAEAgG6ItfDq6/eT
+YAMAACa99dZbcrlc2r9/f1iPW19fr5SUlLAe81rjHjYAAHBJSSve/pOR9/t0
+vPqSb1zRdmVlZZoxY4bWr18vn8/Xp3MOdFxhAwAA5pw8eVLbt2/XmjVrtH79
++uD4T3/6U6WmpmrSpElasWKFJCkzM1M7d+6UJB05ciT4EZX19fX62te+pilT
+pmjKlCl67733+n0d4cIVNgAAYM6GDRs0c+ZMfeUrX1F8fLx2796tlpYWbdiw
+QTt27NCQIUP02WefXfIYI0eO1H/8x38oNjZWdXV1WrRoUTDsBhqCDQAAmFNW
+Vqa//uu/liQtXLhQZWVl6uzs1BNPPKEhQ4ZIkuLj4y95jPPnz+t73/ueampq
+NHjwYNXW1l7zeV8rBBsAADDl6NGjevfdd7V37165XC51dHTI5XJp3rx5Pb7a
+MiYmRp2dnZLU5a0znn/+eY0aNUp79uxRZ2enYmNj+20N4cY9bAAAwJQ333xT
+eXl5OnjwoOrr69XQ0KCxY8cqPj5ev/jFL3Tq1ClJCj4lmpSUpF27dgX3vait
+rU0JCQkaNGiQXnvtNXV0dPT/YsKEYAMAAKaUlZVp7ty5XcbmzZunQ4cOKTc3
+V+np6UpLS9M//MM/SJJ+8IMfaPXq1frqV7+qI0eOBPdZunSpSktLNW3aNNXW
+1mro0KH9uo5w4ilRAABwSV98G47++GiqQCDQbWzZsmXBry++OvSi5ORk/fd/
+/3fw388884wkyev1dhl/7rnnJF24Ird3795wTvma4wobAACAcQQbAACAcTwl
+CiCiur+D+pUpmBnmiQCAYVxhAwAAMI5gAwAAMI5gAwAAMI5gAwAA5gwePFhp
+aWlKSUnRggULgm+WG4pAIKBvfvObkqTf/OY3Kikp6XXbtmNtevnll4P/PnTo
+kObPnx/yucOFFx0AAIBL88UFvwzLO7D52i67yc0336yamhpJ0mOPPaZ/+Zd/
+0fe///3g447jyHEcDRp0ddeecnNzlZub2+vjx9uO6+WXX9bSpUslSYmJiV0+
+PSFSuMIGAABM+9rXvqaPP/5Y9fX1Gj9+vJYuXaopU6aooaFBlZWVmj59uqZM
+maIFCxbo5MmTkqSKigolJydrxowZ+vWvfx081tq1a/W9731PktTS0qK5c+dq
+0qRJmjRpkt577z09+/fP6pNPPlFaWpp++MMfqr6+XikpKZIufE7pE088odTU
+VE2ePFnbtm0LHvPhhx/WzJkz5fV69bd/+7dh/x4QbAAAwKz29nZt3rxZqamp
+kqT/+Z//UV5ent5//30NHTpUzzzzjN555x3t3r1b6enp+qd/+iedOXNG3/nO
+d/Tb3/5W//Vf/6U//vGPPR572bJleuCBB7Rnzx7t3r1bEyZM0I+Kf6Q777xT
+NTU1+tnPftZl+1WrVkmSPvjgA5WVlSk/Pz/4YfM1NTX65S9/qQ8++EC//OUv
+1dDQENbvA8EGAADMOX36tNLS0pSenq4xY8Zo8eLFkqQ77rhD06ZNkyRVVVVp
+3759uu+++5SWlqbS0lIdPHhQ+/fv19ixY+X1euVyufT444/3eI53331XS5Ys
+kXThnrm4uLget7vod7/7nb797W9LuvBxWHfccYdqa2slSVlZWYqLi1NsbKzu
+vvtuHTx4MCzfh4u4hw0AAJjzxXvYvuiLH+DuOI6ys7NVVlbWZZuamhq5XK6w
+z8lxnF4fu+mmm4JfDx48WO3t7WE9N1fYAADAgDRt2jRt375dH3/8sSTp1KlT
+qq2tVXJysg4cOKBPPvlEkroF3UVZWVlavXq1JKmjo0PHjx/X0FuG6sSJEz1u
+f//99+vf//3fJUm1tbX6wx/+oLvuuivcy+oRwQYAAAakL3/5y1q7dq0WLVqk
+iRMnatq0adq/f79iY2Pl9/v1jW98QzNmzNAdd9zR4/4vvviitm3bptTUVE2d
+OlUffvih4kfE67777lNKSop++MMfdtl+6dKl6ujoUGpqqh599FGtXbu2y5W1
+a4mnRAEAwKV94W04Dp04pMRhYXlzj0u6+GrPL0pKStLevXu7jD344IP6/e9/
+323bmTNnav/+/d3GCwoKVFBQIEkaNWqUysvLuzx+6MQhvf76613GLp4zNjZW
+a9euveQxJWnjxo09rqkvuMIGAABgHMEGAABgHMEGAABgHMEGAAC6udRbWODq
+9fX7SbABAIAuYmNjdfToUaItTBzH0dGjRxUbGxvyMXiVKAAA6MLtdquxsVGf
+fvppt8eOnTmmttjLf3j7QHWt1hcbGyu32x3y/gQbAADo4oYbbtDYsWN7fMwX
+8Mk32de/E+pHVtfHU6IAAADGEWwAAADGEWwAAADGEWwAAADG8aIDAANT4Dkp
+8PzV7+eL3le3AYheXGEDAAAwjmADAAAw7rLB1tDQoK9//esaP368JkyYoBdf
+fFGS9Nlnnyk7O1ter1fZ2dlqbW2VdOHdfJctWyaPx6OJEydq9+7dwWOVlpbK
+6/XK6/WqtLQ0OL5r1y6lpqbK4/Fo2bJlwXdW7u0cAAAA15PLBltMTIz+8R//
+UR999JGqqqq0atUq7du3TyUlJcrKylJdXZ2ysrJUUlIiSdq8ebPq6upUV1cn
+v9+vJUuWSLoQX8XFxdqxY4eqq6tVXFwcDLAlS5bI7/cH96uoqJCkXs8BAABw
+PblssCUkJGjKlCmSpGHDhmn8+PFqampSeXm58vPzJUn5+fnasGGDJKm8vFx5
+eXlyuVyaNm2ajh07pubmZm3ZskXZ2dmKj4/X8OHDlZ2drYqKCjU3N+v48eOa
+Pn26XC6X8vLyuhyrp3MAAABcT67qHrb6+nq9//77uvfee9XS0qKEhARJF6Lu
+8OHDkqSmpiaNHj06uI/b7VZTU9Mlx7/42VoXxyX1eg4AAIDryRW/rcfJkyc1
+b948vfDCC7r11lt73e7i/Wdf5HK5rnr8avj9fvn9fklS/aF6+QK+q9q/LwL1
+gX49X3+L5vVF89qkgbO+YzG1Ie0XULt8OhPCjr6QztffBsrPL1TRvL5oXpvE
++iLlioLt/Pnzmjdvnh577DE9/PDDkqRRo0apublZCQkJam5u1siRIyVduELW
+0NAQ3LexsVGJiYlyu90KBAJdxjMzM+V2u9XY2Nht+0ud408VFRWpqKhIkpSe
+ni5fpu/KvwN95Av4+vV8/S2a1xfNa5MGzvrWVrwd0n6ZMb+ST7Eh7OgL6Xz9
+baD8/EIVzeuL5rVJrC/cNmrjFW132adEHcfR4sWLNX78eH3/+98Pjufm5gZf
+6VlaWqo5c+YEx9etWyfHcVRVVaW4uDglJCQoJydHlZWVam1tVWtrqyorK5WT
+k6OEhAQNGzZMVVVVchxH69at63Ksns4BAABwPbnsFbbt27frtddeU2pqqtLS
+0iRJzz77rFasWKFHHnlEa9as0ZgxY/TGG29IkmbPnq1NmzbJ4/FoyJAhevXV
+VyVJ8fHxWrlypTIyMiRJTz/9tOLj4yVJq1evVkFBgU6fPq1Zs2Zp1qxZktTr
+OQAAAK4nlw22GTNm9HifmSRt3bq125jL5dKqVat63L6wsFCFhYXdxtPT07V3
+795u4yNGjOjxHAAAANcTPukAAADAOIINAADAOIINAADAOIINAADAOIINAADA
+OIINAADAOIINAADAOIINAADAOIINAADAuCv68HcAAIDrQuA5KfD81e/nawv/
+XL6AK2wAAADGEWwAAADG8ZQoAACIOkkr3g5pv4LYME8kTLjCBgAAYBzBBgAA
+YBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzB
+BgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAA
+YBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzB
+BgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAA
+YBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYBzBBgAAYFxMpCcAhEPSirevep+C
+mddgIgAAXANcYQMAADCOYAMAADCOYAMAADCOe9iuE6Hc4yVxnxcAABZwhQ0A
+AMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4
+gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0A
+AMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMA4gg0AAMC4mEhPAMYFnpMCz1/9
+fr628M8FAIDrFMGG6xcxCgAYIHhKFAAAwDiCDQAAwDiCDQAAwDiCDQAAwDiC
+DQAAwDiCDQAAwDiCDQAAwDiCDQAAwDiCDQAAwLjLBlthYaFGjhyplJSU4JjP
+59Of/dmfKS0tTWlpadq0aVPwseeee04ej0d33XWXtmzZEhyvqKjQXXfdJY/H
+o5KSkuD4gQMHdO+998rr9erRRx/VuXPnJElnz57Vo48+Ko/Ho3vvvVf19fXh
+WC8AAMCAc9lgKygoUEVFRbfx5cuXq6amRjU1NZo9e7Ykad++fVq/fr0+/PBD
+VVRUaOnSpero6FBHR4e++93vavPmzdq3b5/Kysq0b98+SdKTTz6p5cuXq66u
+TsOHD9eaNWskSWvWrNHw4cP18ccfa/ny5XryySfDuW4AAIAB47LBdv/99ys+
+Pv6KDlZeXq6FCxfqpptu0tixY+XxeFRdXa3q6mp5PB6NGzdON954oxYuXKjy
+8nI5jqN3331X8+fPlyTl5+drw4YNwWPl5+dLkubPn6+tW7fKcZxQ1wkAADBg
+hXwP289//nNNnDhRhYWFam1tlSQ1NTVp9OjRwW3cbreampp6HT969Ki+9KUv
+KSYmpsv4nx4rJiZGcXFxOnr0aKjTBQAAGLBiQtlpyZIlWrlypVwul1auXKm/
++Zu/0S9+8Yser4C5XC51dnb2ON7b9pIu+dif8vv98vv9kqT6Q/XyBXxXs5w+
+CdQH+vV8oToWUxvSfgG1y6czIezoC+l8oQplfQNlbaHid7O3HX0hna+/DZSf
+X6iieX3RvDZp4Kwv2v62hBRso0aNCn79ne98R9/85jclXbhC1tDQEHyssbFR
+iYmJktTj+G233aZjx46pvb1dMTExXba/eCy326329na1tbX1+tRsUVGRioqK
+JEnp6enyZfpCWVZIfAFfv54vVGsr3g5pv8yYX8mn2BB29IV0vlCFsr6BsrZQ
+8bvZ246+kM7X3wbKzy9U0by+aF6bNHDWN1D+tmzUxivaLqSnRJubm4Nfv/XW
+W8FXkObm5mr9+vU6e/asDhw4oLq6Ot1zzz3KyMhQXV2dDhw4oHPnzmn9+vXK
+zc2Vy+XS17/+db355puSpNLSUs2ZMyd4rNLSUknSm2++qQcffLDXK2wAAADR
+7LJX2BYtWqRAIKAjR47I7XaruLhYgUBANTU1crlcSkpK0r/+679KkiZMmKBH
+HnlEd999t2JiYrRq1SoNHjxY0oV73nJyctTR0aHCwkJNmDBBkvSTn/xECxcu
+1N/93d9p8uTJWrx4sSRp8eLF+va3vy2Px6P4+HitX7/+Wn0PAAAATLtssJWV
+lXUbuxhVPXnqqaf01FNPdRufPXt28O0/vmjcuHGqrq7uNh4bG6s33njjctMD
+AACIenzSAQAAgHEEGwAAgHEEGwAAgHEEGwAAgHEEGwAAgHEEGwAAgHEEGwAA
+gHEEGwAAgHEEGwAAgHEEGwAAgHEEGwAAgHEEGwAAgHGX/fB3AEAEBJ6TAs9f
+/X6+tvDPBUDEcYUNAADAOIINAADAOIINAADAOO5hAwAAV477KyOCK2wAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG8bYeAABch5JWvB3SfgWx
+YZ4IrghX2AAAAIwj2AAAAIwj2AAAAIwj2AAAAIwj2AAAAIwj2AAAAIwj2AAA
+AIwj2AAAAIwj2AAAAIzjkw4A4Bri3eQBhANX2AAAAIwj2AAAAIwj2AAAAIzj
+Hrb/L/T7TJ6TAs9f/Y6+tpDOBwAArj9cYQMAADCOYAMAADCOYAMAADCOYAMA
+ADCOYAMAADCOYAMAADCOYAMAADCO92EDACCcArw/J8KPK2wAAADGEWwAAADG
+8ZQoAAC9COVjCwtir8FEcN3jChsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsA
+AIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBx
+BBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsA
+AIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBxBBsAAIBx
+BBsAAIBxBBsAAIBxBBsAAIBxMZGeAABg4Epa8XZI+xXMDPNEgCjHFTYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjeJUoYByvwgMAcIUNAADAuMsGW2Fh
+oUaOHKmUlJTg2Geffabs7Gx5vV5lZ2ertbVVkuQ4jpYtWyaPx6OJEydq9+7d
+wX1KS0vl9Xrl9XpVWloaHN+1a5dSU1Pl8Xi0bNkyOY5zyXMAAABcby4bbAUF
+BaqoqOgyVlJSoqysLNXV1SkrK0slJSWSpM2bN6uurk51dXXy+/1asmSJpAvx
+VVxcrB07dqi6ulrFxcXBAFuyZIn8fn9wv4vn6u0cAAAA15vLBtv999+v+Pj4
+LmPl5eXKz8+XJOXn52vDhg3B8by8PLlcLk2bNk3Hjh1Tc3OztmzZouzsbMXH
+x2v48OHKzs5WRUWFmpubdfz4cU2fPl0ul0t5eXldjtXTOQAAAK43Id3D1tLS
+ooSEBElSQkKCDh8+LElqamrS6NGjg9u53W41NTVdctztdncbv9Q5AAAArjdh
+fZXoxfvPvsjlcl31+NXy+/3y+/2SpPpD9fIFfFd9jGMxtVe9jyQF1C6fzoSw
+oy+k84WK9XUXzWuTpED9oZD+W+hv/G72LOrXF8W/n1H/s2N9vezoC+l8Vyqk
+YBs1apSam5uVkJCg5uZmjRw5UtKFK2QNDQ3B7RobG5WYmCi3261AINBlPDMz
+U263W42Njd22v9Q5elJUVKSioiJJUnp6unyZvqte09qK0N46ITPmV/IpNoQd
+fSGdL1Ssr7toXpskZSb9PqT/Fvobv5s9i/r1RfHvZ9T/7FhfLzv6QjrfRm28
+ou1Ceko0Nzc3+ErP0tJSzZkzJzi+bt06OY6jqqoqxcXFKSEhQTk5OaqsrFRr
+a6taW1tVWVmpnJwcJSQkaNiwYaqqqpLjOFq3bl2XY/V0DgAAgOvNZa+wLVq0
+SIFAQEeOHJHb7VZxcbFWrFihRx55RGvWrNGYMWP0xhtvSJJmz56tTZs2yePx
+aMiQIXr11VclSfHx8Vq5cqUyMjIkSU8//XTwhQyrV69WQUGBTp8+rVmzZmnW
+rFmS1Os5AAAArjeXDbaysrIex7du3dptzOVyadWqVT1uX1hYqMLCwm7j6enp
+2rt3b7fxESNG9HgOAACA6w2fdAAAAGAcnyUKRKvAc1Lg+avfz9cW/rkAAPqE
+K2wAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG8bYeAID+x9vO
+AFeFK2wAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwA
+AADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwA
+AADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwA
+AADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwA
+AADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADG
+EWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwAAADGEWwA
+AADGEWwAAADGEWwAAADGEWwAAADG9SnYkpKSlJqaqrS0NKWnp0uSPvvsM2Vn
+Z8vr9So7O1utra2SJMdxtGzZMnk8Hk2cOFG7d+8OHqe0tFRer1der1elpaXB
+8V27dik1NVUej0fLli2T4zh9mS4AAMCA1OcrbNu2bVNNTY127twpSSopKVFW
+Vpbq6uqUlZWlkpISSdLmzZtVV1enuro6+f1+LVmyRNKFwCsuLtaOHTtUXV2t
+4uLiYOQtWbJEfr8/uF9FRUVfpwsAADDghP0p0fLycuXn50uS8vPztWHDhuB4
+Xl6eXC6Xpk2bpmPHjqm5uVlbtmxRdna24uPjNXz4cGVnZ6uiokLNzc06fvy4
+pk+fLpfLpby8vOCxAAAArid9CjaXy6WHHnpIU6dOld/vlyS1tLQoISFBkpSQ
+kKDDhw9LkpqamjR69Ojgvm63W01NTZccd7vd3cYBAACuNzF92Xn79u1KTEzU
+4cOHlZ2dreTk5F637en+M5fLddXjPfH7/cFgrD9UL1/Ad4Ur+D/HYmqveh9J
+CqhdPp0JYUdfSOcLFevrLprXJrG+3nf0hXS+ULG+nkXz+qJ5bRLr631HX0jn
+u1J9CrbExERJ0siRIzV37lxVV1dr1KhRam5uVkJCgpqbmzVy5EhJF66QNTQ0
+BPdtbGxUYmKi3G63AoFAl/HMzEy53W41NjZ2274nRUVFKioqkiSlp6fLl+m7
+6rWsrXj7qveRpMyYX8mn2BB29IV0vlCxvu6ieW0S6+t9R19I5wsV6+tZNK8v
+mtcmsb7ed/SFdL6N2nhF24X8lOjnn3+uEydOBL+urKxUSkqKcnNzg6/0LC0t
+1Zw5cyRJubm5WrdunRzHUVVVleLi4pSQkKCcnBxVVlaqtbVVra2tqqysVE5O
+jhISEjRs2DBVVVXJcRytW7cueCwAAIDrSchX2FpaWjR37lxJUnt7u771rW9p
+5syZysjI0COPPKI1a9ZozJgxeuONNyRJs2fP1qZNm+TxeDRkyBC9+uqrkqT4
++HitXLlSGRkZkqSnn35a8fHxkqTVq1eroKBAp0+f1qxZszRr1qw+LRYAAGAg
+CjnYxo0bpz179nQbHzFihLZu3dpt3OVyadWqVT0eq7CwUIWFhd3G09PTtXfv
+3lCnCAAAEBX4pAMAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYA
+AADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYA
+AADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYA
+AADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYA
+AADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYA
+AADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADj
+CDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjCDYAAADjzAdbRUWF7rrr
+Lnk8HpWUlER6OgAAAP3OdLB1dHTou9/9rjZv3qx9+/aprKxM+/bti/S0AAAA
++pXpYKuurpbH49G4ceN04403auHChSovL4/0tAAAAPqVy3EcJ9KT6M2bb76p
+iooKvfLKK5Kk1157TTt27NDPf/7zLtv5/X75/X5J0v79+5WcnNxvc/z000/1
+5S9/ud/O19+ieX3RvDaJ9Q10rG/giua1Sawv3Orr63XkyJHLbhfTD3MJWa0y
+IFkAAAcpSURBVE8t6XK5uo0VFRWpqKioP6bUTXp6unbu3BmRc/eHaF5fNK9N
+Yn0DHesbuKJ5bRLrixTTT4m63W41NDQE/93Y2KjExMQIzggAAKD/mQ62jIwM
+1dXV6cCBAzp37pzWr1+v3NzcSE8LAACgXw32+Xy+SE+iN4MGDZLX69Xjjz+u
+f/7nf9bjjz+uefPmRXpa3UydOjXSU7imonl90bw2ifUNdKxv4IrmtUmsLxJM
+v+gAAAAAxp8SBQAAAMEGAABgHsEGAABgnOn3YbNm//79Ki8vV1NTk1wulxIT
+E5Wbm6vx48dHemq4Avv371dTU5Puvfde3XLLLcHxiooKzZw5M4IzC4/q6mq5
+XC5lZGRo3759qqioUHJysmbPnh3pqYVdXl6e1q1bF+lpXDO/+93vVF1drZSU
+FD300EORnk6f7NixQ+PHj9ett96q06dPq6SkRLt379bdd9+tH/3oR4qLi4v0
+FPvkpZde0ty5czV69OhIT+WauPgODYmJifrzP/9zvf7663rvvfc0fvx4FRUV
+6YYbboj0FPvsk08+0VtvvaWGhgbFxMTI6/Vq0aJF5n43edHBFfrJT36isrIy
+LVy4UG63W9KF94Vbv369Fi5cqBUrVkR4htfWq6++qieeeCLS0wjZSy+9pFWr
+Vmn8+PGqqanRiy++qDlz5kiSpkyZot27d0d4hn1TXFyszZs3q729XdnZ2dqx
+Y4cyMzP1zjvvKCcnR0899VSkpxiyP30rH8dxtG3bNj344IOSpN/85jeRmFZY
+3XPPPaqurpYk/du//ZtWrVqluXPnqrKyUn/xF38xoP++TJgwQXv27FFMTIyK
+ioo0ZMgQzZ8/X1u3btWePXv061//OtJT7JO4uDgNHTpUd955pxYtWqQFCxZE
+1acAPPbYY2pvb9epU6f0pS99SSdPntTDDz+srVu3ynEclZaWRnqKffLSSy/p
+t7/9rR544AFt2rRJaWlpGj58uN566y29/PLLyszMjPQU/4+DK+L1ep1z5851
+Gz979qzj8XgiMKP+NXr06EhPoU9SUlKcEydOOI7jOAcOHHCmTp3qvPDCC47j
+OE5aWlokpxYWKSkpTnt7u/P55587w4YNc9ra2hzHcZxTp045qampEZ5d30ye
+PNl57LHHnG3btjmBQMDZtm2bc/vttzuBQMAJBAKRnl5YfPF3MD093Tl8+LDj
+OI5z8uRJJyUlJVLTCovk5OTg15MnT+7y2KRJk/p7OmGXlpbmdHR0OFu2bHEK
+Cwud2267zcnJyXHWrl3rHD9+PNLT67OLfz/Onz/vjBw50mlvb3ccx3E6OzsH
+/N8Wx/m/v52O4ziff/6588ADDziO4zgHDx40978NPCV6hQYNGqRDhw7pjjvu
+6DLe3NysQYOi41bAiRMn9jjuOI5aWlr6eTbh1dHREXwaNCkpSYFAQPPnz9fB
+gwd7/Ai0gSYmJkaDBw/WkCFDdOedd+rWW2+VJN18880D/vdz586devHFF/Xj
+H/9YP/vZz5SWlqabb75ZDzzwQKSnFjadnZ1qbW1VZ2enHMcJXqEZOnSoYmIG
+9p/plJSU4BX6SZMmaefOnUpPT1dtbW1UPJ3mcrk0aNAgPfTQQ3rooYd0/vx5
+bd68WWVlZfrBD36gTz/9NNJT7JPOzk6dO3dOn3/+uU6dOqW2tjbFx8fr7Nmz
+On/+fKSnFxbt7e0aPHiwzp49qxMnTkiSxowZY259A/svQT964YUXlJWVJa/X
+G7xX4Q9/+IM+/vjjbh9GP1C1tLRoy5YtGj58eJdxx3H01a9+NUKzCo/bb79d
+NTU1SktLkyTdcsst2rhxowoLC/XBBx9EeHZ9d+ONN+rUqVMaMmSIdu3aFRxv
+a2sb8ME2aNAgLV++XAsWLNDy5cs1atQotbe3R3paYdXW1qapU6fKcRy5XC79
+8Y9/1O23366TJ08O+P9D8corr+iv/uqv9Mwzz+i2227T9OnTNXr0aI0ePVqv
+vPJKpKfXZ3/687nhhhuUm5ur3NxcnT59OkKzCp/FixcrOTlZHR0d+vGPf6wF
+CxZo3Lhxqqqq0sKFCyM9vT77y7/8S2VkZGjatGn6z//8Tz355JOSLnwAfHx8
+fIRn1xX3sF2Fzs5OVVdXq6mpSY7jyO12KyMjQ4MHD4701MJi8eLFeuKJJzRj
+xoxuj33rW9/S66+/HoFZhUdjY6NiYmJ0++23d3ts+/btuu+++yIwq/A5e/as
+brrppm7jR44cUXNzs1JTUyMwq2vj7bff1vbt2/Xss89GeirX3KlTp9TS0qKx
+Y8dGeip9duLECf3v//6v2tvb5Xa7NWrUqEhPKSxqa2v1la98JdLTuKYOHTok
+SUpMTNSxY8f0zjvvaMyYMbrnnnsiPLPw+PDDD/XRRx8pJSVFycnJkZ5Orwg2
+AAAA4wb2cyUAAADXAYINAADAOIINAADAOIINAADAOIINAADAuP8HmHRHyIcy
+blYAAAAASUVORK5CYII=
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">29</span><span style=" color:#000080;">]:</span> </p></body></html>
