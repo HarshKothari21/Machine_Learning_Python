@@ -1,5 +1,6 @@
 # Machine_Learning_Python
-Applied Machine learning with the help of python libraries.Trained model by splitting dataset in to train and test sets(80-20).
+Applied Machine learning with the help of python libraries.
+Trained model by splitting dataset in to train and test sets(80-20).
 
 ## Linear Regression
 - A Linear Model that Predictes Salary Based on Years of experience.
