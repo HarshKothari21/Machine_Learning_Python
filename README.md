@@ -31,3 +31,12 @@ Trained model by splitting dataset in to train and test sets(80-20).
 - Used Feature Scaling.
 - Comparing result through Confusion Matrix.
 - Libraries used : Pandas | Matplotlib | Sklearn | Numpy
+
+## Natural Language Processing(NLP)
+- A Model that Predictes whether reviews are good or bad.
+- Algorithmn used to train model - GaussianNB
+- Libraries used : Pandas | Matplotlib | Sklearn | re | nltk
+
+## Sentiment Analysis
+- It analyse the statement based on ratio of postive, negative and neutrality.
+- Libraries used : vaderSentiment
