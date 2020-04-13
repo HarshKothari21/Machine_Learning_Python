@@ -1,6 +1,7 @@
 # Machine_Learning_Python
-Applied Machine learning with the help of python libraries.
+Applied Machine learning with python libraries.
 Trained model by splitting dataset in to train and test sets(80-20).
+**Supervised machine learning** is used to solve both classification and regression problems.
 
 ## Linear Regression
 - A Linear Model that Predictes Salary Based on Years of experience.
@@ -21,4 +22,12 @@ Trained model by splitting dataset in to train and test sets(80-20).
 ## Logistic Regression
 - A Model that Predictes whether the product will get purchased or not based on age and salary of person.
 - The model can be visualized from output.png file.
+- Comparing result through Confusion Matrix.
+- Libraries used : Pandas | Matplotlib | Sklearn | Numpy
+
+## k-Nearest Neighbors(KNN) Classifier
+- A Model that Predictes whether the product will get purchased or not based on age and salary of person.
+- The model can be visualized from output.png file.
+- Used Feature Scaling.
+- Comparing result through Confusion Matrix.
 - Libraries used : Pandas | Matplotlib | Sklearn | Numpy
