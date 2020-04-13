@@ -12,33 +12,6 @@ def sentiment_analyzer_scores(sentence):
 sentiment_analyzer_scores("I did not like the movie.")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Punctuations
 print(sentiment_analyzer_scores("The food here is good"))
 
